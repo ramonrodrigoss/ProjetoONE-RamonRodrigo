@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Projeto  "ONE" {% endblock %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+                    Olá, {{request.user.first_name}}
+                    {% else %}
+                    Por favor, se logue!
+                    {% endif %}
+{% endblock %}
